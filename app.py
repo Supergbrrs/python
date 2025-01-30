@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-from streamlit_autorefresh import st_autorefresh
 
 # Configurar a página para tela cheia
 st.set_page_config(layout="wide")
@@ -34,9 +33,6 @@ st.markdown(
 
 # Exibir o título centralizado e com fonte maior
 st.markdown('<div class="title-container"><h1 class="title">📊 CONTROLE DE SALDOS ROTAS</h1></div>', unsafe_allow_html=True)
-
-# Configurar atualização automática a cada 10 segundos
-st_autorefresh(interval=5_000, key="data_refresh")
 
 # Caminho do arquivo Excel
 file_path = r"saldo_telecom.xlsx"
